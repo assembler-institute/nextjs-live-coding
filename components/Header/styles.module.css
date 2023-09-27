@@ -1,0 +1,11 @@
+.navbar{
+    display: flex;
+
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.link{
+    list-style-type: none;
+    font-size: larger;
+}

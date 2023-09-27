@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.links{
+    text-decoration: none;
+    color: black;
+}
