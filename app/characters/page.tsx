@@ -1,6 +1,11 @@
 import {getAllCharacters} from "@/services/character.services";
-import CharacterList from "@/components/CharacterList/CharacterList";
+// import CharacterList from "@/components/CharacterList/CharacterList";
 import {Metadata} from "next";
+import {Suspense} from "react";
+
+import dynamic from "next/dynamic";
+
+const CharacterList = dynamic(() => import ("@/components/CharacterList/CharacterList"))
 
 export const metadata: Metadata = {
     title: 'Characters List',
@@ -13,7 +18,9 @@ const Characters = async (props: Props) => {
 
     return (
         <div>
-            <CharacterList characters={characters}/>
+            <Suspense fallback={<h1>Loading...</h1>}>
+                <CharacterList characters={characters}/>
+            </Suspense>
         </div>
     );
 };
