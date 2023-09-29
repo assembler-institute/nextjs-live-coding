@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 type Props = {};
 const Locations = async (props: Props) => {
     const locations = await getAllLocations()
-
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
     return (
         <div>
             <h1>Rick & Morty Locations Universe</h1>
