@@ -13,6 +13,10 @@ const routes = [
     {
         name: "Locations",
         path: "/locations"
+    },
+    {
+        name: "Users",
+        path: "/users"
     }
 ]
 
