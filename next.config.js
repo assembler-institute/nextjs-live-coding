@@ -4,6 +4,9 @@ const nextConfig = {
         domains: [
             "rickandmortyapi.com",
         ]
+    },
+    experimental: {
+        serverActions: true,
     }
 }
 
