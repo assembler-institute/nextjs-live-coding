@@ -17,6 +17,10 @@ const routes = [
     {
         name: "Users",
         path: "/users"
+    },
+    {
+        name: "Redux Toolkit",
+        path: "/toolkit"
     }
 ]
 

@@ -3,6 +3,7 @@ import type {Metadata} from 'next'
 import Header from "@/components/Header/Header";
 import {UserProvider} from '@auth0/nextjs-auth0/client';
 import AuthProvider from "@/components/AuthProvider/AuthProvider";
+import ReduxProvider from "@/redux/provider";
 
 
 export const metadata: Metadata = {
@@ -22,10 +23,12 @@ export default function RootLayout({
         <html lang="en">
         <body>
         <UserProvider>
-            <AuthProvider>
-                <Header/>
-                {children}
-            </AuthProvider>
+            <ReduxProvider>
+                <AuthProvider>
+                    <Header/>
+                    {children}
+                </AuthProvider>
+            </ReduxProvider>
         </UserProvider>
         </body>
         </html>
